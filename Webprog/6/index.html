@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas API</title>
+    <style>
+        td{
+            width: 15px;
+            height: 15px;
+        }
+        td[data-color= "black"]{
+            background-color: black;
+        }
+        td[data-color= "red"]{
+            background-color: red;
+        }
+        td[data-color= "blue"]{
+            background-color: blue;
+        }
+        td[data-color= "yellow"]{
+            background-color: yellow;
+        }
+        .selected{
+            border: 3px solid green;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td data-color="black" class="selected"></td>
+            <td data-color="red"></td>
+            <td data-color="blue"></td>
+            <td data-color="yellow"></td>
+        </tr>
+    </table>
+    <canvas width="600" height="400"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
