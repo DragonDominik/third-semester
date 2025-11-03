@@ -1,14 +1,14 @@
 function delegate(parent, child, when, what) {
     function eventHandlerFunction(event) {
-      let eventTarget = event.target;
-      let eventHandler = this;
-      let closestChild = eventTarget.closest(child);
-  
-      if (eventHandler.contains(closestChild)) {
-        what(event, closestChild);
-      }
+        let eventTarget = event.target;
+        let eventHandler = this;
+        let closestChild = eventTarget.closest(child);
+
+        if (eventHandler.contains(closestChild)) {
+            what(event, closestChild);
+        }
     }
-  
+
     parent.addEventListener(when, eventHandlerFunction);
 }
 
@@ -42,8 +42,8 @@ canvas.addEventListener("mousemove", event => {
     const y = event.y - canvas.getBoundingClientRect().y;
 
     context.beginPath();
-            context.moveTo(prevLocation.x, prevLocation.y);
-            context.lineTo(x, y);
+    context.moveTo(prevLocation.x, prevLocation.y);
+    context.lineTo(x, y);
     context.stroke();
 
     prevLocation.x = x;
