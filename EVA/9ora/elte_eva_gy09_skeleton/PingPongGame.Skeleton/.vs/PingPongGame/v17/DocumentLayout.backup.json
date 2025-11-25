@@ -3,32 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\drago\\Documents\\Windows Gits\\third-semester\\EVA\\9ora\\elte_eva_gy09_skeleton\\PingPongGame.Skeleton\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F9EEDB2A-9AA1-4225-8417-D70C0BE160F8}|PingPongGame\\PingPongGame.csproj|c:\\users\\drago\\documents\\windows gits\\third-semester\\eva\\9ora\\elte_eva_gy09_skeleton\\pingponggame.skeleton\\pingponggame\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9EEDB2A-9AA1-4225-8417-D70C0BE160F8}|PingPongGame\\PingPongGame.csproj|solutionrelative:pingponggame\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9EEDB2A-9AA1-4225-8417-D70C0BE160F8}|PingPongGame\\PingPongGame.csproj|c:\\users\\drago\\documents\\windows gits\\third-semester\\eva\\9ora\\elte_eva_gy09_skeleton\\pingponggame.skeleton\\pingponggame\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9EEDB2A-9AA1-4225-8417-D70C0BE160F8}|PingPongGame\\PingPongGame.csproj|solutionrelative:pingponggame\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9EEDB2A-9AA1-4225-8417-D70C0BE160F8}|PingPongGame\\PingPongGame.csproj|c:\\users\\drago\\documents\\windows gits\\third-semester\\eva\\9ora\\elte_eva_gy09_skeleton\\pingponggame.skeleton\\pingponggame\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F9EEDB2A-9AA1-4225-8417-D70C0BE160F8}|PingPongGame\\PingPongGame.csproj|solutionrelative:pingponggame\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{F9EEDB2A-9AA1-4225-8417-D70C0BE160F8}|PingPongGame\\PingPongGame.csproj|c:\\users\\drago\\documents\\windows gits\\third-semester\\eva\\9ora\\elte_eva_gy09_skeleton\\pingponggame.skeleton\\pingponggame\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9EEDB2A-9AA1-4225-8417-D70C0BE160F8}|PingPongGame\\PingPongGame.csproj|solutionrelative:pingponggame\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9EEDB2A-9AA1-4225-8417-D70C0BE160F8}|PingPongGame\\PingPongGame.csproj|c:\\users\\drago\\documents\\windows gits\\third-semester\\eva\\9ora\\elte_eva_gy09_skeleton\\pingponggame.skeleton\\pingponggame\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F9EEDB2A-9AA1-4225-8417-D70C0BE160F8}|PingPongGame\\PingPongGame.csproj|solutionrelative:pingponggame\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{990F527B-5801-4675-A882-A6411A7FF5C0}|PingPongGame.Model\\PingPongGame.Model.csproj|c:\\users\\drago\\documents\\windows gits\\third-semester\\eva\\9ora\\elte_eva_gy09_skeleton\\pingponggame.skeleton\\pingponggame.model\\pingpongmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{990F527B-5801-4675-A882-A6411A7FF5C0}|PingPongGame.Model\\PingPongGame.Model.csproj|solutionrelative:pingponggame.model\\pingpongmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9EEDB2A-9AA1-4225-8417-D70C0BE160F8}|PingPongGame\\PingPongGame.csproj|c:\\users\\drago\\documents\\windows gits\\third-semester\\eva\\9ora\\elte_eva_gy09_skeleton\\pingponggame.skeleton\\pingponggame\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9EEDB2A-9AA1-4225-8417-D70C0BE160F8}|PingPongGame\\PingPongGame.csproj|solutionrelative:pingponggame\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9EEDB2A-9AA1-4225-8417-D70C0BE160F8}|PingPongGame\\PingPongGame.csproj|c:\\users\\drago\\documents\\windows gits\\third-semester\\eva\\9ora\\elte_eva_gy09_skeleton\\pingponggame.skeleton\\pingponggame\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9EEDB2A-9AA1-4225-8417-D70C0BE160F8}|PingPongGame\\PingPongGame.csproj|solutionrelative:pingponggame\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9EEDB2A-9AA1-4225-8417-D70C0BE160F8}|PingPongGame\\PingPongGame.csproj|c:\\users\\drago\\documents\\windows gits\\third-semester\\eva\\9ora\\elte_eva_gy09_skeleton\\pingponggame.skeleton\\pingponggame\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9EEDB2A-9AA1-4225-8417-D70C0BE160F8}|PingPongGame\\PingPongGame.csproj|solutionrelative:pingponggame\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9EEDB2A-9AA1-4225-8417-D70C0BE160F8}|PingPongGame\\PingPongGame.csproj|c:\\users\\drago\\documents\\windows gits\\third-semester\\eva\\9ora\\elte_eva_gy09_skeleton\\pingponggame.skeleton\\pingponggame\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9EEDB2A-9AA1-4225-8417-D70C0BE160F8}|PingPongGame\\PingPongGame.csproj|solutionrelative:pingponggame\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9EEDB2A-9AA1-4225-8417-D70C0BE160F8}|PingPongGame\\PingPongGame.csproj|c:\\users\\drago\\documents\\windows gits\\third-semester\\eva\\9ora\\elte_eva_gy09_skeleton\\pingponggame.skeleton\\pingponggame\\viewmodel\\delegatecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,6 +25,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{F9EEDB2A-9AA1-4225-8417-D70C0BE160F8}|PingPongGame\\PingPongGame.csproj|c:\\users\\drago\\documents\\windows gits\\third-semester\\eva\\9ora\\elte_eva_gy09_skeleton\\pingponggame.skeleton\\pingponggame\\viewmodel\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9EEDB2A-9AA1-4225-8417-D70C0BE160F8}|PingPongGame\\PingPongGame.csproj|solutionrelative:pingponggame\\viewmodel\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9EEDB2A-9AA1-4225-8417-D70C0BE160F8}|PingPongGame\\PingPongGame.csproj|c:\\users\\drago\\documents\\windows gits\\third-semester\\eva\\9ora\\elte_eva_gy09_skeleton\\pingponggame.skeleton\\pingponggame\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F9EEDB2A-9AA1-4225-8417-D70C0BE160F8}|PingPongGame\\PingPongGame.csproj|solutionrelative:pingponggame\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{990F527B-5801-4675-A882-A6411A7FF5C0}|PingPongGame.Model\\PingPongGame.Model.csproj|c:\\users\\drago\\documents\\windows gits\\third-semester\\eva\\9ora\\elte_eva_gy09_skeleton\\pingponggame.skeleton\\pingponggame.model\\pingpongmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{990F527B-5801-4675-A882-A6411A7FF5C0}|PingPongGame.Model\\PingPongGame.Model.csproj|solutionrelative:pingponggame.model\\pingpongmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9EEDB2A-9AA1-4225-8417-D70C0BE160F8}|PingPongGame\\PingPongGame.csproj|c:\\users\\drago\\documents\\windows gits\\third-semester\\eva\\9ora\\elte_eva_gy09_skeleton\\pingponggame.skeleton\\pingponggame\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9EEDB2A-9AA1-4225-8417-D70C0BE160F8}|PingPongGame\\PingPongGame.csproj|solutionrelative:pingponggame\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{990F527B-5801-4675-A882-A6411A7FF5C0}|PingPongGame.Model\\PingPongGame.Model.csproj|c:\\users\\drago\\documents\\windows gits\\third-semester\\eva\\9ora\\elte_eva_gy09_skeleton\\pingponggame.skeleton\\pingponggame.model\\nextpositioneventargs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,54 +62,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\drago\\Documents\\Windows Gits\\third-semester\\EVA\\9ora\\elte_eva_gy09_skeleton\\PingPongGame.Skeleton\\PingPongGame\\App.xaml.cs",
               "RelativeDocumentMoniker": "PingPongGame\\App.xaml.cs",
               "ToolTip": "C:\\Users\\drago\\Documents\\Windows Gits\\third-semester\\EVA\\9ora\\elte_eva_gy09_skeleton\\PingPongGame.Skeleton\\PingPongGame\\App.xaml.cs",
               "RelativeToolTip": "PingPongGame\\App.xaml.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAAADkAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAiwEcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-10T16:17:58.554Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "C:\\Users\\drago\\Documents\\Windows Gits\\third-semester\\EVA\\9ora\\elte_eva_gy09_skeleton\\PingPongGame.Skeleton\\PingPongGame\\AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "PingPongGame\\AssemblyInfo.cs",
-              "ToolTip": "C:\\Users\\drago\\Documents\\Windows Gits\\third-semester\\EVA\\9ora\\elte_eva_gy09_skeleton\\PingPongGame.Skeleton\\PingPongGame\\AssemblyInfo.cs",
-              "RelativeToolTip": "PingPongGame\\AssemblyInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T15:31:16.554Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\drago\\Documents\\Windows Gits\\third-semester\\EVA\\9ora\\elte_eva_gy09_skeleton\\PingPongGame.Skeleton\\PingPongGame\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "PingPongGame\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\drago\\Documents\\Windows Gits\\third-semester\\EVA\\9ora\\elte_eva_gy09_skeleton\\PingPongGame.Skeleton\\PingPongGame\\MainWindow.xaml.cs",
               "RelativeToolTip": "PingPongGame\\MainWindow.xaml.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAnwCcAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAiwEcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-10T15:17:23.47Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\drago\\Documents\\Windows Gits\\third-semester\\EVA\\9ora\\elte_eva_gy09_skeleton\\PingPongGame.Skeleton\\PingPongGame\\MainWindow.xaml",
               "RelativeDocumentMoniker": "PingPongGame\\MainWindow.xaml",
@@ -121,20 +104,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "MainViewModel.cs",
               "DocumentMoniker": "C:\\Users\\drago\\Documents\\Windows Gits\\third-semester\\EVA\\9ora\\elte_eva_gy09_skeleton\\PingPongGame.Skeleton\\PingPongGame\\ViewModel\\MainViewModel.cs",
               "RelativeDocumentMoniker": "PingPongGame\\ViewModel\\MainViewModel.cs",
-              "ToolTip": "C:\\Users\\drago\\Documents\\Windows Gits\\third-semester\\EVA\\9ora\\elte_eva_gy09_skeleton\\PingPongGame.Skeleton\\PingPongGame\\ViewModel\\MainViewModel.cs",
-              "RelativeToolTip": "PingPongGame\\ViewModel\\MainViewModel.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAIwG8AAAAcAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\drago\\Documents\\Windows Gits\\third-semester\\EVA\\9ora\\elte_eva_gy09_skeleton\\PingPongGame.Skeleton\\PingPongGame\\ViewModel\\MainViewModel.cs*",
+              "RelativeToolTip": "PingPongGame\\ViewModel\\MainViewModel.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-10T15:19:45.696Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\drago\\Documents\\Windows Gits\\third-semester\\EVA\\9ora\\elte_eva_gy09_skeleton\\PingPongGame.Skeleton\\PingPongGame\\App.xaml",
               "RelativeDocumentMoniker": "PingPongGame\\App.xaml",
@@ -146,13 +129,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "DelegateCommand.cs",
               "DocumentMoniker": "C:\\Users\\drago\\Documents\\Windows Gits\\third-semester\\EVA\\9ora\\elte_eva_gy09_skeleton\\PingPongGame.Skeleton\\PingPongGame\\ViewModel\\DelegateCommand.cs",
               "RelativeDocumentMoniker": "PingPongGame\\ViewModel\\DelegateCommand.cs",
               "ToolTip": "C:\\Users\\drago\\Documents\\Windows Gits\\third-semester\\EVA\\9ora\\elte_eva_gy09_skeleton\\PingPongGame.Skeleton\\PingPongGame\\ViewModel\\DelegateCommand.cs",
               "RelativeToolTip": "PingPongGame\\ViewModel\\DelegateCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-10T15:19:39.255Z",
               "EditorCaption": ""
@@ -171,20 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PingPongModel.cs",
-              "DocumentMoniker": "C:\\Users\\drago\\Documents\\Windows Gits\\third-semester\\EVA\\9ora\\elte_eva_gy09_skeleton\\PingPongGame.Skeleton\\PingPongGame.Model\\PingPongModel.cs",
-              "RelativeDocumentMoniker": "PingPongGame.Model\\PingPongModel.cs",
-              "ToolTip": "C:\\Users\\drago\\Documents\\Windows Gits\\third-semester\\EVA\\9ora\\elte_eva_gy09_skeleton\\PingPongGame.Skeleton\\PingPongGame.Model\\PingPongModel.cs",
-              "RelativeToolTip": "PingPongGame.Model\\PingPongModel.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAArwCAAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T15:24:47.253Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "ViewModelBase.cs",
               "DocumentMoniker": "C:\\Users\\drago\\Documents\\Windows Gits\\third-semester\\EVA\\9ora\\elte_eva_gy09_skeleton\\PingPongGame.Skeleton\\PingPongGame\\ViewModel\\ViewModelBase.cs",
               "RelativeDocumentMoniker": "PingPongGame\\ViewModel\\ViewModelBase.cs",
@@ -194,6 +164,30 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-10T15:43:07.97Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\drago\\Documents\\Windows Gits\\third-semester\\EVA\\9ora\\elte_eva_gy09_skeleton\\PingPongGame.Skeleton\\PingPongGame\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "PingPongGame\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\drago\\Documents\\Windows Gits\\third-semester\\EVA\\9ora\\elte_eva_gy09_skeleton\\PingPongGame.Skeleton\\PingPongGame\\AssemblyInfo.cs",
+              "RelativeToolTip": "PingPongGame\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T15:31:16.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PingPongModel.cs",
+              "DocumentMoniker": "C:\\Users\\drago\\Documents\\Windows Gits\\third-semester\\EVA\\9ora\\elte_eva_gy09_skeleton\\PingPongGame.Skeleton\\PingPongGame.Model\\PingPongModel.cs",
+              "RelativeDocumentMoniker": "PingPongGame.Model\\PingPongModel.cs",
+              "ToolTip": "C:\\Users\\drago\\Documents\\Windows Gits\\third-semester\\EVA\\9ora\\elte_eva_gy09_skeleton\\PingPongGame.Skeleton\\PingPongGame.Model\\PingPongModel.cs",
+              "RelativeToolTip": "PingPongGame.Model\\PingPongModel.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAArwCAAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T15:24:47.253Z"
             },
             {
               "$type": "Document",
@@ -230,6 +224,10 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-10T15:27:10.085Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             }
           ]
         }

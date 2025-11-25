@@ -1,0 +1,5 @@
+C:\Users\drago\Documents\Windows Gits\third-semester\EVA\9ora\elte_eva_gy09_skeleton\PingPongGame.Skeleton\PingPongGame\obj\Debug\net8.0-windows\PingPongGame.csproj.AssemblyReference.cache
+C:\Users\drago\Documents\Windows Gits\third-semester\EVA\9ora\elte_eva_gy09_skeleton\PingPongGame.Skeleton\PingPongGame\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\drago\Documents\Windows Gits\third-semester\EVA\9ora\elte_eva_gy09_skeleton\PingPongGame.Skeleton\PingPongGame\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\drago\Documents\Windows Gits\third-semester\EVA\9ora\elte_eva_gy09_skeleton\PingPongGame.Skeleton\PingPongGame\obj\Debug\net8.0-windows\PingPongGame_MarkupCompile.cache
+C:\Users\drago\Documents\Windows Gits\third-semester\EVA\9ora\elte_eva_gy09_skeleton\PingPongGame.Skeleton\PingPongGame\obj\Debug\net8.0-windows\PingPongGame_MarkupCompile.lref

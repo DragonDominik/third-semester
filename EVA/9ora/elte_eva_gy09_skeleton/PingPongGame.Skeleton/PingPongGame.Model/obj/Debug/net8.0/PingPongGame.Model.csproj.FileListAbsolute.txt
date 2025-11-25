@@ -1,0 +1,12 @@
+C:\Users\drago\Documents\Windows Gits\third-semester\EVA\9ora\elte_eva_gy09_skeleton\PingPongGame.Skeleton\PingPongGame.Model\bin\Debug\net8.0\PingPongGame.Model.deps.json
+C:\Users\drago\Documents\Windows Gits\third-semester\EVA\9ora\elte_eva_gy09_skeleton\PingPongGame.Skeleton\PingPongGame.Model\bin\Debug\net8.0\PingPongGame.Model.dll
+C:\Users\drago\Documents\Windows Gits\third-semester\EVA\9ora\elte_eva_gy09_skeleton\PingPongGame.Skeleton\PingPongGame.Model\bin\Debug\net8.0\PingPongGame.Model.pdb
+C:\Users\drago\Documents\Windows Gits\third-semester\EVA\9ora\elte_eva_gy09_skeleton\PingPongGame.Skeleton\PingPongGame.Model\obj\Debug\net8.0\PingPongGame.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\drago\Documents\Windows Gits\third-semester\EVA\9ora\elte_eva_gy09_skeleton\PingPongGame.Skeleton\PingPongGame.Model\obj\Debug\net8.0\PingPongGame.Model.AssemblyInfoInputs.cache
+C:\Users\drago\Documents\Windows Gits\third-semester\EVA\9ora\elte_eva_gy09_skeleton\PingPongGame.Skeleton\PingPongGame.Model\obj\Debug\net8.0\PingPongGame.Model.AssemblyInfo.cs
+C:\Users\drago\Documents\Windows Gits\third-semester\EVA\9ora\elte_eva_gy09_skeleton\PingPongGame.Skeleton\PingPongGame.Model\obj\Debug\net8.0\PingPongGame.Model.csproj.CoreCompileInputs.cache
+C:\Users\drago\Documents\Windows Gits\third-semester\EVA\9ora\elte_eva_gy09_skeleton\PingPongGame.Skeleton\PingPongGame.Model\obj\Debug\net8.0\PingPongGame.Model.sourcelink.json
+C:\Users\drago\Documents\Windows Gits\third-semester\EVA\9ora\elte_eva_gy09_skeleton\PingPongGame.Skeleton\PingPongGame.Model\obj\Debug\net8.0\PingPongGame.Model.dll
+C:\Users\drago\Documents\Windows Gits\third-semester\EVA\9ora\elte_eva_gy09_skeleton\PingPongGame.Skeleton\PingPongGame.Model\obj\Debug\net8.0\refint\PingPongGame.Model.dll
+C:\Users\drago\Documents\Windows Gits\third-semester\EVA\9ora\elte_eva_gy09_skeleton\PingPongGame.Skeleton\PingPongGame.Model\obj\Debug\net8.0\PingPongGame.Model.pdb
+C:\Users\drago\Documents\Windows Gits\third-semester\EVA\9ora\elte_eva_gy09_skeleton\PingPongGame.Skeleton\PingPongGame.Model\obj\Debug\net8.0\ref\PingPongGame.Model.dll

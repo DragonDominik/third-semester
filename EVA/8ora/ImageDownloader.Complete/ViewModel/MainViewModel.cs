@@ -1,81 +1,101 @@
 ﻿using ELTE.ImageDownloader.Model;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
 
 namespace ELTE.ImageDownloader.ViewModel
 {
-    public class MainViewModel : ViewModelBase
+    public class MainViewModel : ViewModelBase, IDisposable
     {
         private WebPage? _model;
-
         private bool _isDownloading;
+        private float _progress;
 
         public bool IsDownloading
         {
-            get { return _isDownloading; }
-            set
+            get => _isDownloading;
+            private set
             {
                 _isDownloading = value;
-                // OnPropertyChanged("IsDownloading");
-                // OnPropertyChanged(nameof(IsDownloading));
                 OnPropertyChanged();
                 OnPropertyChanged(nameof(DownloadButtonLabel));
             }
         }
-        public string DownloadButtonLabel => IsDownloading ? "Beöltése megszakítása" : "Képek betöltése";
 
-        private float _progress;
+        public string DownloadButtonLabel
+        {
+            get => _isDownloading ? "Letöltés megszakítása" : "Képek betöltése";
+        }
 
         public float Progress
         {
-            get { return _progress; }
-            set { 
-                _progress = value; 
+            get => _progress;
+            private set
+            {
+                _progress = value;
                 OnPropertyChanged();
-
             }
         }
 
-        public ObservableCollection<BitmapImage> Images { get; } = [];
+        public ObservableCollection<BitmapImage> Images { get; set; }
 
-        public DelegateCommand DownloadCommand { get; }
+        public DelegateCommand DownloadCommand { get; set; }
+        public DelegateCommand ImageSelectedCommand { get; set; }
+
+        public event EventHandler<BitmapImage>? ImageSelected;
 
         public MainViewModel()
         {
-            DownloadCommand = new DelegateCommand(async (param) =>
-            {
-                if (IsDownloading)
-                {
+            Images = new ObservableCollection<BitmapImage>();
 
+            DownloadCommand = new DelegateCommand(async param =>
+            {
+                if (!_isDownloading)
+                {
+                    await LoadAsync(new Uri(param?.ToString() ?? string.Empty));
+                }
+                else
+                {
                     CancelLoad();
                 }
-                else if (param is string url)
-                    await LoadAsync(new Uri(url));
-            }
-            );
+            });
+
+            ImageSelectedCommand = new DelegateCommand(param =>
+            {
+                if (param is BitmapImage bitmap)
+                    ImageSelected?.Invoke(this, bitmap);
+            });
         }
 
-        public void CancelLoad()
+        public void Dispose()
         {
-            _model?.CancelLoad();
+            _model?.Dispose();
+            _model = null;
         }
 
-        private async Task LoadAsync(Uri uri)
+        public async Task LoadAsync(Uri url)
         {
+            IsDownloading = true;
             Images.Clear();
-            _model = new WebPage(uri);
+
+            _model = new WebPage(url);
             _model.ImageLoaded += OnImageLoaded;
             _model.LoadProgress += OnLoadProgress;
-
-            IsDownloading = true;
             await _model.LoadImagesAsync();
+
             IsDownloading = false;
+        }
+
+        private void OnImageLoaded(object? sender, WebImage e)
+        {
+            var bitmapImage = new BitmapImage();
+            bitmapImage.BeginInit();
+            bitmapImage.StreamSource = new MemoryStream(e.Data);
+            bitmapImage.EndInit();
+
+            Images.Add(bitmapImage);
         }
 
         private void OnLoadProgress(object? sender, int e)
@@ -83,13 +103,12 @@ namespace ELTE.ImageDownloader.ViewModel
             Progress = e;
         }
 
-        private void OnImageLoaded(object? sender, WebImage e)
+        private void CancelLoad()
         {
-            var bitmap = new BitmapImage();
-            bitmap.BeginInit();
-            bitmap.StreamSource = new MemoryStream(e.Data);
-            bitmap.EndInit();
-            Images.Add(bitmap);
+            if (IsDownloading)
+            {
+                _model?.CancelLoad();
+            }
         }
     }
 }

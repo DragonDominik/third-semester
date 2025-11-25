@@ -10,7 +10,7 @@
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="VisibilityConverter" />
     </Window.Resources>
-
+    
     <DockPanel>
         <TextBox x:Name="urlTextBox" Text="https://www.inf.elte.hu/" DockPanel.Dock="Top" />
         <Button Content="{Binding DownloadButtonLabel}" DockPanel.Dock="Top"

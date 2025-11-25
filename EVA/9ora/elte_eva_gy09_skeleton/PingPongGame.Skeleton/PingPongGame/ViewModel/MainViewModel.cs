@@ -1,165 +1,208 @@
-﻿using ELTE.PingPongGame.Model;
-using PingPongGame;
+﻿using Escaper.Model;
+using Escaper.Persistance;
+using Escaper.Persistence;
+using PingPongGame.ViewModel;
 using System;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Shapes;
 
-namespace PingPongGame.ViewModel
+namespace EscaperWPF.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
-        private readonly PingPongModel _model;
+        private IGameController? _logic;
+        private IPersistence _persistence;
+        private bool _isPaused = true;
+        private int _cellSize = 30;
 
-        private bool _isCollision;
+        public ObservableCollection<UIElement> BoardElements { get; } = new();
 
-        /// <summary>
-        /// Start position of the ball
-        /// </summary>
-        public Thickness BallStartPosition { get; private set; }
-        /// <summary>
-        /// Start position of the pad
-        /// </summary>
-        public Thickness PadStartPosition { get; private set; }
+        public DelegateCommand NewGameCommand { get; }
+        public DelegateCommand PauseCommand { get; }
+        public DelegateCommand SaveCommand { get; }
+        public DelegateCommand LoadCommand { get; }
+        public DelegateCommand MovePlayerCommand { get; }
 
-        /// <summary>
-        /// Size of the grid
-        /// </summary>
-        public Size GridSize { get; private set; }
-        /// <summary>
-        /// Size of the ball
-        /// </summary>
-        public Size BallSize { get; private set; }
-        /// <summary>
-        /// Size of the pad
-        /// </summary>
-        public Size PadSize { get; private set; }
+        private string _status = "Start a game";
+        public string Status { get => _status; set => SetProperty(ref _status, value); }
 
-        /// <summary>
-        /// True if the ball hit the pad
-        /// </summary>
-        public bool IsCollision
-        {
-            get => _isCollision;
-            private set
-            {
-                _isCollision = value;
-                OnPropertyChanged();
-            }
-        }
+        private string _time = "Time: 0";
+        public string Time { get => _time; set => SetProperty(ref _time, value); }
 
-        /// <summary>
-        /// Event to notify that the ball has a new target position
-        /// </summary>
-        public event EventHandler<Thickness>? BallNextPosition;
-        /// <summary>
-        /// Event to notify that the pad has a new target position
-        /// </summary>
-        public event EventHandler<Thickness>? PadNextPosition;
-        /// <summary>
-        /// Event to notify that the game is over
-        /// </summary>
-        public event EventHandler? GameOver;
-
-        /// <summary>
-        /// Command to handle right or left key press
-        /// </summary>
-        public DelegateCommand MovePadCommand { get; set; }
-        /// <summary>
-        /// Command to start a new game
-        /// </summary>
-        public DelegateCommand StartGameCommand { get; set; }
-
-        /// <summary>
-        /// Initialize
-        /// </summary>
         public MainViewModel()
         {
-            GridSize = new Size(800, 450);
-            BallSize = new Size(40, 40);
-            PadSize = new Size(120, 10);
+            _persistence = new Persistence();
 
-            StartGameCommand = new DelegateCommand(_ => StartGame());
+            NewGameCommand = new DelegateCommand(_ => StartNewGame());
+            PauseCommand = new DelegateCommand(_ => TogglePause());
+            SaveCommand = new DelegateCommand(_ => SaveGame());
+            LoadCommand = new DelegateCommand(_ => LoadGame());
 
-            MovePadCommand = new DelegateCommand(param =>
+            MovePlayerCommand = new DelegateCommand(param =>
             {
-                if (param is string stringParam)
+                if (_logic == null || _isPaused) return;
+
+                if (param is string direction)
                 {
-                    bool success = Enum.TryParse(stringParam, out Direction direction);
-                    if (!success)
-                        return;
-                   
-                    _model?.MovePadToDirection(direction);
+                    switch (direction)
+                    {
+                        case "Up": _logic.MovePlayer(0, -1); break;
+                        case "Down": _logic.MovePlayer(0, 1); break;
+                        case "Left": _logic.MovePlayer(-1, 0); break;
+                        case "Right": _logic.MovePlayer(1, 0); break;
+                    }
                 }
             });
-
-            BallStartPosition = new Thickness(GridSize.Width / 2 - BallSize.Width / 2, GridSize.Height / 2, 0, 0);
-            PadStartPosition = new Thickness(GridSize.Width / 2 - PadSize.Width / 2, GridSize.Height - 100, 0, 0);
-
-            _model = new PingPongModel(GridSize.Width, GridSize.Height,
-            new Element(BallStartPosition.Left, BallStartPosition.Top, BallSize.Width, BallSize.Height),
-            new Element(PadStartPosition.Left, PadStartPosition.Top, PadSize.Height, PadSize.Width));
-
-            _model.BallMoveToNextPosition += OnBallNextPosition;
-            _model.PadMoveToNextPosition += OnPadNextPosition;
-            _model.GameOver += (o, e) => GameOver?.Invoke(this, e);
-
         }
 
-        /// <summary>
-        /// Start new game
-        /// </summary>
-        public void StartGame()
+        private void StartNewGame()
         {
-            _model.StartGame();
+            int size = 21; // fix méret, lehet bővíteni UI-val
+            var board = new Board(size, size);
+            _logic = new GameController(board);
+
+            _logic.BoardUpdated += () => Application.Current.Dispatcher.Invoke(UpdateBoard);
+            _logic.GameEnded += () => Application.Current.Dispatcher.Invoke(EndGame);
+
+            _logic.StartGame();
+            _isPaused = false;
+            Status = "Game Running";
+            Time = "Time: 0";
+
+            UpdateBoard();
         }
 
-        /// <summary>
-        /// Update the position of the ball
-        /// </summary>
-        /// <param name="left"></param>
-        /// <param name="top"></param>
-        public void MoveBall(double left, double top)
+        private void TogglePause()
         {
-            IsCollision = false;
-            _model.MoveBall(left, top);
+            if (_logic == null || _logic.IsGameOver) return;
+
+            _isPaused = !_isPaused;
+            if (_isPaused) (_logic as GameController)?.PauseGame();
+            else (_logic as GameController)?.ResumeGame();
+
+            Status = _isPaused ? "Game Paused" : "Game Running";
         }
 
-        /// <summary>
-        /// Update the position of the pad
-        /// </summary>
-        /// <param name="left"></param>
-        /// <param name="top"></param>
-        public void MovePad(double left, double top)
+        private void SaveGame()
         {
-            _model.MovePad(left, top);
+            if (_logic == null || _logic.IsGameOver) return;
+
+            string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+            string path = System.IO.Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+                $"escaper_{timestamp}.json"
+            );
+
+            _persistence.SaveGame(_logic.GetBoard(), path);
+            MessageBox.Show($"Game saved to:\n{path}");
         }
 
-
-        /// <summary>
-        /// Handle the next target position of the ball
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void OnBallNextPosition(object? sender, NextPositionEventArgs e)
+        private void LoadGame()
         {
-            if (e.WasCollision)
+            var ofd = new Microsoft.Win32.OpenFileDialog
             {
-                IsCollision = true;
+                Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*",
+                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+            };
+
+            if (ofd.ShowDialog() == true)
+            {
+                _logic = new GameController(_persistence.LoadGame(ofd.FileName));
+                _logic.BoardUpdated += () => Application.Current.Dispatcher.Invoke(UpdateBoard);
+                _logic.GameEnded += () => Application.Current.Dispatcher.Invoke(EndGame);
+
+                _isPaused = true;
+                (_logic as GameController)?.PauseGame();
+
+                Status = "Game Paused";
+                Time = "Time: 0";
+
+                UpdateBoard();
+            }
+        }
+
+        private void EndGame()
+        {
+            (_logic as GameController)?.PauseGame();
+            _isPaused = true;
+
+            string result = _logic!.PlayerWon ? "You won" : "You lost";
+            Status = result;
+
+            int elapsed = (_logic as GameController)?.ElapsedTime ?? 0;
+            MessageBox.Show($"{result} in {elapsed} seconds!", "Game Over", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void UpdateBoard()
+        {
+            if (_logic == null) return;
+
+            BoardElements.Clear();
+            var board = _logic.GetBoard();
+            int margin = _cellSize / 5;
+
+            // Cells
+            for (int x = 0; x < board.Size; x++)
+                for (int y = 0; y < board.Size; y++)
+                {
+                    var rect = new Rectangle
+                    {
+                        Width = _cellSize - 1,
+                        Height = _cellSize - 1,
+                        Stroke = Brushes.Black
+                    };
+                    Canvas.SetLeft(rect, x * _cellSize);
+                    Canvas.SetTop(rect, y * _cellSize);
+                    BoardElements.Add(rect);
+                }
+
+            // Mines
+            foreach (var mine in board.Mines)
+            {
+                var rect = new Rectangle
+                {
+                    Width = _cellSize - 2 * margin,
+                    Height = _cellSize - 2 * margin,
+                    Fill = Brushes.Black
+                };
+                Canvas.SetLeft(rect, mine.Pos.X * _cellSize + margin);
+                Canvas.SetTop(rect, mine.Pos.Y * _cellSize + margin);
+                BoardElements.Add(rect);
             }
 
-            Thickness nextPosition = new(e.Left, e.Top, 0, 0);
-            BallNextPosition?.Invoke(this, nextPosition);
-        }
+            // Player
+            var p = board.Player.Pos;
+            var playerEllipse = new Ellipse
+            {
+                Width = _cellSize - 2 * margin,
+                Height = _cellSize - 2 * margin,
+                Fill = Brushes.Blue
+            };
+            Canvas.SetLeft(playerEllipse, p.X * _cellSize + margin);
+            Canvas.SetTop(playerEllipse, p.Y * _cellSize + margin);
+            BoardElements.Add(playerEllipse);
 
+            // Enemies
+            foreach (var enemy in board.Enemies.Where(en => en.IsActive))
+            {
+                var eEllipse = new Ellipse
+                {
+                    Width = _cellSize - 2 * margin,
+                    Height = _cellSize - 2 * margin,
+                    Fill = Brushes.Red
+                };
+                Canvas.SetLeft(eEllipse, enemy.Pos.X * _cellSize + margin);
+                Canvas.SetTop(eEllipse, enemy.Pos.Y * _cellSize + margin);
+                BoardElements.Add(eEllipse);
+            }
 
-        /// <summary>
-        /// Handle the next target position of the pad
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void OnPadNextPosition(object? sender, NextPositionEventArgs e)
-        {
-            Thickness nextPosition = new(e.Left, e.Top, 0, 0);
-            PadNextPosition?.Invoke(this, nextPosition);
+            Time = $"Time: {_logic?.ElapsedTime ?? 0}";
         }
     }
 }

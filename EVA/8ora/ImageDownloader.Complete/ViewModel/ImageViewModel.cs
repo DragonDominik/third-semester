@@ -1,15 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
 
 namespace ELTE.ImageDownloader.ViewModel
 {
-    internal class ImageViewModel
+    public class ImageViewModel : ViewModelBase
     {
-        public BitmapImage Image { get; }
+        public BitmapImage Image { get; private set; }
 
+        public DelegateCommand SaveImageCommand { get; private set; }
+
+        public event EventHandler<BitmapImage>? SaveImage;
+
+        public ImageViewModel(BitmapImage image)
+        {
+            Image = image;
+
+            SaveImageCommand = new DelegateCommand(_ =>
+            {
+                SaveImage?.Invoke(this, Image);
+            });
+        }
     }
 }
