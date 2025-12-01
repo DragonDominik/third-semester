@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <Authors>Máté Cserép</Authors>
+    <Company>ELTE, Faculty of Informatics</Company>
+    <Copyright>Copyright © Eötvös Loránd University (ELTE) 2024</Copyright>
+    <RootNamespace>ELTE.BitcoinMonitor.Model</RootNamespace>
+  </PropertyGroup>
+
+</Project>

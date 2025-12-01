@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitcoinMonitor.Model", "BitcoinMonitor.Model\BitcoinMonitor.Model.csproj", "{BC8CDB13-B840-4E11-BEA7-A3170279CB2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinMonitor.Classic", "BitcoinMonitor.Classic\BitcoinMonitor.Classic.csproj", "{9904A8C9-81EC-4971-8D13-25327D060AA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinMonitor.React", "BitcoinMonitor.React\BitcoinMonitor.React.csproj", "{5C0EE378-25CB-4287-B409-CAFC6C65F024}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC8CDB13-B840-4E11-BEA7-A3170279CB2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC8CDB13-B840-4E11-BEA7-A3170279CB2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC8CDB13-B840-4E11-BEA7-A3170279CB2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC8CDB13-B840-4E11-BEA7-A3170279CB2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9904A8C9-81EC-4971-8D13-25327D060AA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9904A8C9-81EC-4971-8D13-25327D060AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9904A8C9-81EC-4971-8D13-25327D060AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9904A8C9-81EC-4971-8D13-25327D060AA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C0EE378-25CB-4287-B409-CAFC6C65F024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C0EE378-25CB-4287-B409-CAFC6C65F024}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C0EE378-25CB-4287-B409-CAFC6C65F024}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C0EE378-25CB-4287-B409-CAFC6C65F024}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8ED6DFD0-3C24-4470-BA85-61D5D00FE36D}
+	EndGlobalSection
+EndGlobal
